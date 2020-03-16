@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang1</title>
+    <script language="JavaScript">
+        let x = 0;
+        let array = Array();
+        function them_phan_tu() {
+            array[x] = document.getElementById("n").value;
+            alert("phần tử: " + array[x] + " đã được thêm " + x);
+            x++;
+            document.getElementById("n").value = "";
+        }
+        function in_mang() {
+            let e = "Các Phần tử đc thêm vào là: " + '<br>' ;
+            for (let i = 0; i < array.length; i++) {
+                e += "phần tử " + i + " = " + array[i] + "<br/>";
+            }
+            document.getElementById("xuat").innerHTML = e;
+        }
+    </script>
+</head>
+<body>
+<h1>thêm vào các phần tử trong một mảng và hiển thị chúng.</h1>
+<input id="n" type="text"/>
+<button type="button" onclick="them_phan_tu()">Add</button>
+<button type="button" onclick="in_mang()">DisPlay</button>
+<div style="color: blue" id="xuat"></div>
+</body>
+</html>
